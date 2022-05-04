@@ -1,0 +1,112 @@
+body {
+    font-family: Tahoma;
+    background-image: url("../img/sena.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    overflow: scroll;
+}
+
+A {
+    text-decoration: none;
+}
+
+.sede1 {
+    width: 10vw;
+    padding: 3vw;
+    float: left;
+    border-radius: 1vw;
+    background-color: rgb(240, 241, 242);
+    margin: 1vw;
+    text-align: center;
+    position: relative;
+    left: 4.5vw;
+}
+
+.centra1 {
+    left: 10vw;
+    width: 80vw;
+    padding: 1vw;
+    position: relative;
+    left: 8vw;
+    top: 1vw;
+}
+
+.img {
+    overflow: hidden;
+    width: 10vw;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+}
+
+.titulo {
+    font-size: 2vw;
+    margin: 2vw;
+    position: relative;
+    left: 32.5vw;
+    background-color: rgb(240, 241, 242);
+    width: 30vw;
+    text-align: center;
+}
+
+.overlay5 {
+    visibility: hidden;
+}
+
+.overlay5.active {
+    visibility: visible;
+}
+
+.popup5 {
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.popup5 .btn-cerrar-popup5 {
+    line-height: 0px;
+    display: block;
+    text-align: end;
+    transition: .3s ease all;
+    color: #BBBBBB;
+    text-align: left;
+}
+
+.popup5.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#in {
+    background-color: #27AE60;
+    width: 30vw;
+    position: relative;
+    height: 30px;
+    left: 34.5vw;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .titulo {
+        width: 50vw;
+        height: 23px;
+        font-size: 18px;
+        position: relative;
+        left: 22.5vw;
+    }
+    #in {
+        width: 50vw;
+        left: 24.5vw;
+    }
+    .sede1 {
+        width: 50vw;
+        left: 10vw;
+    }
+    .img {
+        width: 35vw;
+        left: 8vw;
+        position: relative;
+    }
+}

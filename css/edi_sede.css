@@ -1,0 +1,532 @@
+body {
+    font-family: Tahoma;
+    background-image: url("../img/sena.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    overflow: scroll;
+    text-transform: uppercase;
+}
+
+* {
+    text-transform: uppercase;
+}
+
+.sede {
+    width: 30vw;
+    padding: 1vw;
+    border-radius: 1vw;
+    background-color: rgb(240, 241, 242);
+    margin: 1vw;
+    text-align: center;
+    position: relative;
+    left: 30vw;
+}
+
+* a:link {
+    width: 1vw;
+    padding: 0vw;
+    text-align: center;
+    position: relative;
+    left: -0.5vw;
+    border: none;
+    color: black;
+    text-decoration: none;
+}
+
+.eliminar {
+    margin: 0vw 0.5vw;
+    background-color: #27AE60;
+    color: black;
+    text-align: center;
+}
+
+button {
+    margin: 0vw 0.5vw;
+    background-color: #27AE60;
+    color: black;
+}
+
+.centra {
+    left: 10vw;
+    width: 80vw;
+    padding: 1vw;
+    position: relative;
+    left: 8vw;
+    top: 1vw;
+}
+
+.sentra {
+    width: 30vw;
+    padding: 0vw;
+    float: left;
+    border-radius: 1vw;
+    background-color: rgb(212, 209, 212);
+    margin: 1vw;
+    text-align: center;
+    position: relative;
+    left: 4.5vw;
+    border: solid rgb(212, 209, 212) 1vw;
+}
+
+.bloque {
+    background-color: rgb(126, 125, 125);
+    border-radius: 1vw;
+    padding: 1vw;
+    margin: 1vw;
+}
+
+.ambiente {
+    text-align: left;
+    margin: 1vw;
+}
+
+.na {
+    background-color: aquamarine;
+    margin: 1vw;
+    text-align: center;
+    border: solid aquamarine 1vw;
+}
+
+.eli {
+    text-align: left;
+    width: none;
+    float: right;
+}
+
+
+/* css del formulario (ingresar nuevos bloques) */
+
+.overlay {
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
+}
+
+.overlay2 {
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
+}
+
+.overlay3 {
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
+}
+
+.overlay4,
+.overlay5 {
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
+}
+
+.overlay.active {
+    visibility: visible;
+}
+
+.overlay2.active {
+    visibility: visible;
+}
+
+.overlay3.active {
+    visibility: visible;
+}
+
+.overlay4.active {
+    visibility: visible;
+}
+
+.overlay5.active {
+    visibility: visible;
+}
+
+.popup {
+    background: #F8F8F8;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 1px;
+    padding: 0vw;
+    text-align: center;
+    width: 60vw;
+    transition: .3s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.popup2 {
+    background: #F8F8F8;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 1px;
+    padding: 0vw;
+    text-align: center;
+    width: 60vw;
+    transition: .3s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.popup3 {
+    background: #F8F8F8;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 1px;
+    padding: 0vw;
+    text-align: center;
+    width: 60vw;
+    transition: .3s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.popup4,
+.popup5 {
+    background: #F8F8F8;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 1px;
+    padding: 0vw;
+    text-align: center;
+    width: 40vw;
+    height: 15vw;
+    transition: .3s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.popup hr,
+.popup2 hr {
+    background: rgba(1, 206, 162, 0.822);
+    height: 1px;
+    border: none;
+    margin: 10px 0px;
+    border-radius: 50px;
+}
+
+.popup .btn-cerrar-popup {
+    line-height: 0px;
+    display: block;
+    text-align: end;
+    transition: .3s ease all;
+    color: #BBBBBB;
+    left: 58.5vw;
+}
+
+.popup2 .btn-cerrar-popup2 {
+    line-height: 0px;
+    display: block;
+    text-align: end;
+    transition: .3s ease all;
+    color: #BBBBBB;
+    left: 58.5vw;
+}
+
+.popup3 .btn-cerrar-popup3 {
+    line-height: 0px;
+    display: block;
+    text-align: end;
+    transition: .3s ease all;
+    color: #BBBBBB;
+    left: 58.5vw;
+}
+
+.popup4 .btn-cerrar-popup4 {
+    line-height: 0px;
+    display: block;
+    text-align: end;
+    transition: .3s ease all;
+    color: #BBBBBB;
+    left: 38vw;
+}
+
+.popup5 .btn-cerrar-popup5 {
+    line-height: 0px;
+    display: block;
+    text-align: end;
+    transition: .3s ease all;
+    color: #BBBBBB;
+    text-align: left;
+    left: 38vw;
+}
+
+
+/* ------------------------- */
+
+.popup.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup2.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup3.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup4.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup5.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.popup.active .contenedor-inputs {
+    animation: entradaInputs 1s linear 1s forwards;
+}
+
+.popup2.active .contenedor-inputs {
+    animation: entradaInputs 1s linear 1s forwards;
+}
+
+.popup3.active .contenedor-inputs {
+    animation: entradaInputs 1s linear 1s forwards;
+}
+
+.popup4.active .contenedor-inputs {
+    animation: entradaInputs 1s linear 1s forwards;
+}
+
+
+/* formulario */
+
+#form {
+    width: 60vw;
+    margin: 1vw auto;
+    text-align: center;
+    position: relative;
+    overflow: auto;
+    height: 30vw;
+}
+
+.n_bloque {
+    border-radius: 0vw;
+    border-width: solid;
+}
+
+.cortar {
+    height: 17vw;
+    overflow: auto;
+}
+
+.sentra {
+    width: 35vw;
+    padding: 0vw;
+    border-radius: 1vw;
+    background-color: rgb(212, 209, 212);
+    margin: 1vw;
+    text-align: center;
+    position: relative;
+    left: 4.5vw;
+    border: solid rgb(212, 209, 212) 1vw;
+}
+
+#form fieldset {
+    border: 0 none;
+    border-radius: 3px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    float: left;
+    width: 47vw;
+    margin: 0 10%;
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+.am {
+    border: 0 none;
+    border-radius: 3px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    margin: 0 10%;
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+#form input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-bottom: 1vw;
+    width: 10vw;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.fs-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#ambiente1,
+#ambientes1 {
+    position: relative;
+    text-align: left;
+}
+
+#ambiente2,
+#ambientes2 {
+    position: relative;
+    text-align: left;
+}
+
+#ambiente3,
+#ambientes3 {
+    position: relative;
+    text-align: left;
+}
+
+.n_bloque {
+    text-align: center;
+    left: 50vw;
+}
+
+#ambiente4,
+#ambientes4 {
+    position: relative;
+    text-align: left;
+}
+
+#ambiente5,
+#ambiente5 {
+    position: relative;
+    text-align: left;
+}
+
+#ambiente6,
+#ambients6,
+#ambiente7,
+#ambients7,
+#ambientefin {
+    position: relative;
+    text-align: left;
+}
+
+input button {
+    height: 100%;
+}
+
+.piso {
+    background-color: aquamarine;
+    margin: 1vw;
+    text-align: center;
+    border: solid aquamarine 1vw;
+}
+
+#form button {
+    background: #27AE60;
+    font-weight: bold;
+    color: white;
+    width: 10vw;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 5.5px;
+    margin: 1px 5px;
+    text-decoration: none;
+}
+
+
+/* aqui comienza lo responcibo para telefonos*/
+
+@media all and (max-width: 700px) {
+    .sentra {
+        float: none;
+        width: 85vw;
+        left: 0vw;
+    }
+    .centra {
+        left: 1vw;
+    }
+    .cortar {
+        height: 50vw;
+    }
+    .sede {
+        width: 89vw;
+        left: 1vw;
+    }
+    .eliminar {
+        width: min-content;
+    }
+    .eli {
+        width: none;
+        left: 1vw;
+    }
+    .popup,
+    .popup2,
+    .popup3 {
+        width: 90vw;
+        text-size-adjust: initial;
+        height: 100vw;
+    }
+    #form {
+        width: 90vw;
+        height: 80vw;
+    }
+    .popup4,
+    .popup5 {
+        width: 90vw;
+        height: 50vw;
+    }
+    #form fieldset {
+        padding: 0vw;
+        margin: 0vw;
+    }
+    #form input {
+        width: max-content;
+    }
+    .popup hr,
+    .popup2 hr,
+    .popup3 hr {
+        width: 80.5vw;
+    }
+    #form button {
+        width: max-content;
+    }
+    .popup5 .btn-cerrar-popup5,
+    .popup4 .btn-cerrar-popup4,
+    .popup3 .btn-cerrar-popup3,
+    .popup2 .btn-cerrar-popup2,
+    .popup .btn-cerrar-popup {
+        left: 85vw;
+    }
+}

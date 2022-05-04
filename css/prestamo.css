@@ -1,0 +1,223 @@
+
+
+body{
+
+    font-family:Tahoma;
+ 
+    background-image: url("../img/sena.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+#centrar 
+{
+text-align: center;
+position: center;
+left: center;
+color: black;
+}
+
+
+
+.container {
+  width: 100%;
+  justify-content: center;
+  /* max-width: 45%;
+  margin: auto; */
+  
+  display: flex;
+  
+}
+.container2 {
+  width: 100%;
+  justify-content: center;
+  /* max-width: 45%;
+  margin: auto; */
+  
+      position: relative;
+    left: 27vw;
+    
+}
+
+.table {
+  width: 50%;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 100%; 
+  font-family:Arial;
+  
+  
+}
+
+.table tr {
+  background-color:  #ddd;
+  border: 1px solid black;
+  
+}
+
+.nose{
+
+text-align: center;
+padding: 10px;
+width: 80%;
+position: relative;
+
+}
+
+.table th, .table td {
+  font-size: 12px;
+ 
+  text-align: center;
+  border: 1px solid black;
+  
+}
+
+.table thead th{ 
+  text-transform: uppercase;
+  background-color: #39A67F;
+}
+
+
+
+.table tbody td:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 1000px) {
+  .table {
+      border: 0px;
+  }
+  .table caption {
+      font-size: 12px;
+  }
+  .table thead {
+      display: none;
+  }
+  .table tr {
+      margin-bottom: 8px;
+      border-bottom: 4px solid #ddd;
+      display: block;
+  }
+  .table th, .table td {
+      font-size: 12px;
+      width: auto;
+  }
+  .table td {
+      display: flex;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+      
+  }
+  .table  td:last-child {
+      border-bottom: 0px;
+  }
+  .table td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      text-transform: uppercase;
+      float: left;
+      width: 110px;
+      text-transform: capitalize;
+      color: rgb(26, 26, 26);
+  }
+}
+
+.field {
+  position: absolute;
+  top: 40px;
+  display:flex;
+  position:realtive;
+  margin:5em auto;
+  width:70%;
+  flex-direction:row;
+
+}
+
+.field>input[type=text] {
+  flex:1;
+  padding:0.6em;
+  border:0.2em solid rgb(26, 188, 156);
+  border-radius: 15px;
+
+  
+}
+
+.boton
+
+    {
+        padding: 0.5em 1em;
+        border: none;
+        
+        cursor: pointer;
+      }
+
+
+
+
+  
+.clave
+{
+text-align: center;
+position: absolute;
+left: 40%;
+color: black;
+top: 30%;
+}
+
+  
+.titulo
+{
+text-align: center;
+position: absolute;
+left: 38%;
+color: black;
+top: 10%;
+}
+.bs{
+  position:center;
+  
+  }
+  .form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form input {
+  
+    height: 30px;
+    margin: 0.5rem;
+  }
+  
+  .form button {
+    padding: 0.5em 1em;
+    border: none;
+    background: rgb(100, 200, 255);
+    cursor: pointer;
+  }
+  .form1 button {
+
+    padding: 0.5em 1em;
+    border: none;
+    background: rgb(100, 200, 255);
+    cursor: pointer;
+    left: 10px;
+  }
+  .form11  {
+      
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    left: 20vw;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    top: 4vw;
+  }
+  

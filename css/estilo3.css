@@ -1,0 +1,31 @@
+
+
+
+
+body{
+background-color: #EAEDED;
+ font-family:Tahoma;
+ 
+    background-image: url("../img/sena.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    overflow: scroll;
+
+}
+
+ 
+table{
+border:10px solid #F4D03F;
+padding:1000px;
+margin:0 auto;
+background: #F4D03F ;
+font-family:Arial, Helvetica, sans-serif;
+width: 180%;
+height: 300px;
+}
+th{
+    border: 2px solid #808080 ;
+    background: #ADD8E6 ;
+    
+}

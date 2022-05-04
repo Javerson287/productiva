@@ -1,0 +1,22 @@
+
+
+body{
+
+    font-family:Tahoma;
+ 
+    background-image: url("../img/sena.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    overflow: scroll;
+    
+}
+
+
+.center{
+
+text-align: center;
+position: center;
+    
+}
+

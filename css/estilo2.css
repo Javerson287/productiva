@@ -1,0 +1,96 @@
+
+
+body{
+
+    font-family:Tahoma;
+ 
+    background-image: url("../img/sena.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    overflow: scroll;
+    
+}
+
+
+.container1 {
+    width: 100%;
+    justify-content: center;
+    /* max-width: 45%;
+    margin: auto; */
+    
+    display: flex;
+    
+  }
+  
+  .table {
+    width: 100%;
+    border: 1px solid rgb(163, 30, 30);
+    border-collapse: collapse;
+    margin: 0;
+    /* padding: 10%; */
+    font-family:Arial;
+    
+  }
+  
+  .table tr {
+    background-color: #f8f8f8;
+    border: 1px solid black;
+  }
+  
+  .table th, .table td {
+    font-size: 12px;
+    padding: 8px;
+    text-align: center;
+    width: max-content;
+  }
+  
+  .table thead th{ 
+    text-transform: uppercase;
+    background-color:#39A67F;
+  }
+  
+  
+  
+  .table tbody td:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .table {
+        border: 0px;
+    }
+    .table caption {
+        font-size: 12px;
+    }
+    .table thead {
+        display: none;
+    }
+    .table tr {
+        margin-bottom: 8px;
+        border-bottom: 4px solid #ddd;
+        display: block;
+    }
+    .table th, .table td {
+        font-size: 12px;
+        width: auto;
+    }
+    .table td {
+        display: flex;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+        
+    }
+    .table  td:last-child {
+        border-bottom: 0px;
+    }
+    .table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+        width: 110px;
+        text-transform: capitalize;
+        color: rgb(128, 128, 128);
+    }
+  }

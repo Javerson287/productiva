@@ -1,0 +1,248 @@
+body {
+    font-family: Tahoma;
+    background-image: url("../img/sena.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    overflow: scroll;
+}
+
+.titulo {
+    font-size: 1.5vw;
+    margin: 2vw;
+    left: 22.5vw;
+    background-color: rgb(240, 241, 242);
+    width: 30vw;
+    text-align: center;
+    position: relative;
+}
+
+.titulo2 {
+    font-size: 1.5vw;
+    margin: 2vw;
+    left: 27vw;
+    background-color: rgb(240, 241, 242);
+    width: 30vw;
+    text-align: center;
+    position: relative;
+}
+
+.editar {
+    position: absolute;
+    top: 13vw;
+    width: 90vw;
+    left: 4vw;
+    background-color: #39A67F;
+    border: solid 9px #39A67F;
+}
+
+fieldset {
+    top: 2vw;
+    background-color: #39A67F;
+    width: 80vw;
+    position: absolute;
+    left: 9vw;
+    text-align: center;
+}
+
+#imp,
+select {
+    font-size: 18px;
+}
+
+
+/* esto es nuevo */
+
+#in {
+    background-color: #27AE60;
+    width: 30vw;
+    position: relative;
+    height: 30px;
+    left: 34.5vw;
+    text-align: center;
+}
+
+.container1 {
+    width: 100%;
+    justify-content: center;
+    /* max-width: 45%;
+    margin: auto; */
+    display: flex;
+}
+
+.table {
+    width: 95%;
+    border: 1px solid rgb(163, 30, 30);
+    border-collapse: collapse;
+    margin: 0;
+    /* padding: 10%; */
+    font-family: Arial;
+    left: 2vw;
+    position: relative;
+}
+
+.table tr {
+    background-color: #f8f8f8;
+    border: 1px solid black;
+}
+
+.table th,
+.table td {
+    font-size: 12px;
+    padding: 8px;
+    text-align: center;
+    width: max-content;
+}
+
+.table thead th {
+    text-transform: uppercase;
+    background-color: #39A67F;
+}
+
+.table tbody td:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.overlay5.active {
+    visibility: visible;
+}
+
+.popup5 {
+    background: #F8F8F8;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 1px;
+    padding: 0vw;
+    text-align: center;
+    width: 40vw;
+    height: 15vw;
+    transition: .3s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.popup5 .btn-cerrar-popup5 {
+    line-height: 0px;
+    display: block;
+    text-align: end;
+    transition: .3s ease all;
+    color: #BBBBBB;
+    text-align: left;
+    left: 38vw;
+}
+
+.popup5.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+    .table {
+        border: 0px;
+    }
+    .table caption {
+        font-size: 12px;
+    }
+    .table thead {
+        display: none;
+    }
+    .table tr {
+        margin-bottom: 8px;
+        border-bottom: 4px solid #ddd;
+        display: block;
+    }
+    .table th,
+    .table td {
+        font-size: 12px;
+        width: auto;
+    }
+    .table td {
+        display: flex;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+    .table td:last-child {
+        border-bottom: 0px;
+    }
+    .table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+        width: 110px;
+        text-transform: capitalize;
+        color: rgb(128, 128, 128);
+    }
+    #impe {
+        width: 20vw;
+        font-size: 16px;
+        left: 12.5vw;
+    }
+    select {
+        width: auto;
+    }
+    .titulo,
+    .titulo2 {
+        font-size: 16px;
+        width: 50vw;
+        left: 12.5vw;
+    }
+    .editar {
+        position: relative;
+        top: 20vw;
+        width: 90vw;
+        left: 5vw;
+    }
+    .popup5 {
+        height: 30vw;
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .editar {
+        position: relative;
+        top: 40vw;
+        width: 90vw;
+        left: 5vw;
+    }
+    #impe,
+    select,
+    .titulo,
+    .titulo2 {
+        font-size: 12px;
+        width: 50vw;
+        left: 12.5vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .editar {
+        position: relative;
+        top: 35vw;
+        width: 90vw;
+        left: 5vw;
+    }
+    #impe,
+    select {
+        font-size: 12px;
+        width: 50vw;
+        left: 12.5vw;
+    }
+    .popup5 {
+        height: 60vw;
+        width: 80vw;
+    }
+}
+
+.overlay5 {
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
+}

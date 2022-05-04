@@ -1,0 +1,100 @@
+
+
+body{
+
+    font-family:Tahoma;
+ 
+    background-image: url("../img/sena.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    overflow: scroll;
+    
+}
+
+#centrar 
+{
+text-align: center;
+position: center;
+left: center;
+color: black;
+}
+* 
+{
+  margin:1px;
+  padding:0px;
+}
+
+#header {
+  margin:auto;
+  width:119%;
+  font-family:Arial, Helvetica, sans-serif;
+ 
+
+}
+
+
+#buscar
+{
+  
+  position: relative;
+  text-align: center;
+  left: center;
+  
+  
+}
+
+
+
+
+.field {
+  position: absolute;
+  top: 40px;
+  display:flex;
+  position:realtive;
+  margin:5em auto;
+  width:70%;
+  flex-direction:row;
+
+}
+
+.field>input[type=text] {
+  flex:1;
+  padding:0.6em;
+  border:0.2em solid rgb(26, 188, 156);
+  border-radius: 15px;
+
+  
+}
+
+
+.nav
+
+*
+
+{
+
+  list-style:none;
+
+}
+
+
+  
+.clave
+{
+text-align: center;
+position: absolute;
+left: 40%;
+color: black;
+top: 30%;
+}
+
+  
+.titulo
+{
+text-align: center;
+position: absolute;
+left: 38%;
+color: black;
+top: 10%;
+}

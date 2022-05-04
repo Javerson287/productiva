@@ -1,0 +1,157 @@
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+body {
+	font-family: montserrat, arial, verdana;
+  background-image: url("../img/sena.jpg");
+  background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+#centrar 
+{
+text-align: center;
+position: center;
+left: center;
+color: black;
+}
+
+/*form styles*/
+#form {
+	width: 80vw;
+	margin: 10px auto;
+	text-align: center;
+	position: relative;
+	display: flex;
+}
+#form fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+
+	width: 80%;
+	margin: 10% 10%;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+
+
+a{
+    background-color: #39A67F;
+	border:1px solid #39A67F;
+	border-radius:10px;
+	width: 125px;
+	color:#fff;
+	text-decoration:none;
+	text-transform:uppercase;
+	text-align:center;
+	display:inline-block;
+}
+
+@media all and (min-width: 900px) {
+    a{
+        background-color:#39A67F;
+		border:1px solid #39A67F;
+        padding: 9px ;
+		margin: 10px;
+        
+    }
+	.formularios{
+		display: flex;
+		width: 70%;
+		position: absolute;
+		left: 13vw;
+		flex-direction:row;
+		
+	
+		
+	}
+	.for1 a{
+		width: 50%;
+		margin-left:auto;
+		position: relative;
+		left:22vw ;
+	}
+}
+@media (max-width: 900px) { 
+	a{
+		padding: 9px;
+		margin: 10px;
+		
+	}
+	.for1 a{
+		width: 55vw;
+		margin-left:auto;
+		position: relative;
+		left: 22vw;
+	}
+
+ }
+/*   */
+
+.caja1 * 
+{
+  margin:1px;
+  padding:0px;
+}
+
+
+
+.caja1 ul, ol {
+  list-style:none;
+}
+
+
+
+.caja1 nav li a {
+  background-color:#2e518b;
+  color:#fff;
+  text-decoration:none;
+  padding:10px 12px;
+  display:block;
+          
+
+}
+
+.caja1 nav li a:hover {
+  background-color:#434343;
+}
+
+.nav li ul {
+  display:none;
+  position:absolute;
+  min-width:80px;
+}
+
+.nav li:hover > ul {
+  display:block;
+}
+
+.nav li ul li {
+  position:relative;
+}
+
+.nav li ul li ul {
+  right:-180px;
+  top:0px;
+}
+
+
+.cuerpo{
+
+position: relative;
+top: 2vw;
+
+}
+
+
