@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ingresar sede</title>
+    <link rel="stylesheet" type=" text/css" href="../css/insert sede.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="center">
+        <form action="../controladores/recibir.php" method="GET" id="form">
+
+            <fieldset>
+                <a href="#" id="btn-cerrar-popup5" class="btn-cerrar-popup5"><i class="fas fa-times"></i></a>
+                <h2 class="fs-title">Ingresar sede</h2>
+                <div class="sede">
+                    <input type="text" name="sede" placeholder="sede"> <button onclick="Agregarbloque();" type="button">bloques</button>
+                </div>
+                <div class="sentra">
+                    <div class="centra">
+
+                        <div class="bloque"><input type="text" name="bloque1" placeholder="bloque "></div>
+                        <div class="cuerpo">
+                            <div id="pisos1">
+                                <div class="na">
+                                    <div class="piso">
+                                        <input type="text" name="piso11" placeholder=" piso ">
+
+                                    </div>
+                                    <hr>
+                                    <div class="ambiente">
+                                        <input type="text" name="ambiente111" placeholder=" ambiente ">
+                                        <button onclick="Agregarambiente(1);" type="button">+ ambiente</button><br>
+
+                                        <div id="ambiente1">
+
+                                        </div>
+                                    </div>
+
+
+                                    <!-- espacio para crear mas campos de pisos -->
+
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="mpiso"><button onclick="Agregarpiso(1,1);" type="button">+ pisos</button></div>
+
+                    </div>
+                    <div id="dentra">
+
+                    </div>
+                    <br>
+
+                </div>
+                <div class="enviar">
+                    <button type="submit" class="enviar" value="enviar">enviar</button></div>
+            </fieldset>
+        </form>
+    </div>
+    <script src="../js/comandoinsert.js"></script>
+
+</body>
+
+</html>
