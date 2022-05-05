@@ -2,26 +2,24 @@
  
     <div class="popup_pro" id="popup_pro">
         <a href="#" id="btn-cerrar-popup_pro" class="btn-cerrar-popup_pro"><i class="fas fa-times"></i></a>
-        <h3>Editar ñ Programas</h3>
+        <h3>Editar  Programas</h3>
         <?php
 
 
         ?>
 
 
-        <form action="../controladores/editar2.php" method="GET" id="form">
+        <form action="../controladores/editar3.php" method="POST" id="form">
             <!-- e almasena informacion del programa temporalmente que se ira a actualizar o modificar -->
             <input type="hidden" name="ficha_i" id="fichai" value="fichai">
-            <input type="hidden" name="campo_tabla" value="ficha">
-            <input type="hidden" name="tabla" value="programas">
             <div class="am">
                 <!-- este es el formulario que le muestra al uuario para poder modificar los campos -->
                 <!-- id programa -->
-                <input type="text" id="ficha" value="" name="edi" placeholder="id programa ">
+                <input type="text" id="ficha" value="" name="id" placeholder="id programa " required>
                 <!-- nombre del programa -->
-                <input type="text" id="c" value="" name="edi" placeholder=" programa">
+                <input type="text" id="c" value="" name="edi" placeholder=" programa" required>
                 <!-- ct aprendizes -->
-                <input type="text" id="ct_aprendiz" value="" name="ct_aprendiz" placeholder="ct_aprendiz" />
+                <input type="text" id="ct_aprendiz" value="" name="ct_aprendiz" placeholder="ct_aprendiz" required/>
 
                 <!-- lista de los nivele que hay registrados -->
                 <select name='nivel' id="nv" class="form-control" required>
@@ -36,7 +34,7 @@
                 </select>
 
                 <!-- lista de tipos de formacion que hay registrados -->
-                <select name='profecion' id="f" class="form-control" required>
+                <select name='formacion' id="f" class="form-control" required>
                     <?php
                     //Vincular con la tabla tipo_formacion y extraer datos
                     $query = $mysqli->query("SELECT * FROM tipo_formacion");
