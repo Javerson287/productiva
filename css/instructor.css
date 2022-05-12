@@ -103,7 +103,8 @@ select {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.overlay5.active {
+.overlay5.active,
+.overlay_pro.active {
     visibility: visible;
 }
 
@@ -120,7 +121,21 @@ select {
     opacity: 0;
 }
 
-.popup5 .btn-cerrar-popup5 {
+.popup_pro {
+    background: #F8F8F8;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 1px;
+    padding: 0vw;
+    text-align: center;
+    width: 55vw;
+    height: 15vw;
+    transition: .3s ease all;
+    transform: scale(0.7);
+    opacity: 0;
+}
+
+.popup5 .btn-cerrar-popup5,
+.popup_pro .btn-cerrar-popup_pro {
     line-height: 0px;
     display: block;
     text-align: end;
@@ -130,7 +145,8 @@ select {
     left: 38vw;
 }
 
-.popup5.active {
+.popup5.active,
+.popup_pro.active {
     transform: scale(1);
     opacity: 1;
 }
@@ -196,6 +212,10 @@ select {
         height: 30vw;
         width: 80vw;
     }
+    .popup_pro {
+        height: 30vw;
+        width: 120vw;
+    }
 }
 
 @media screen and (max-width: 340px) {
@@ -228,13 +248,15 @@ select {
         width: 50vw;
         left: 12.5vw;
     }
-    .popup5 {
+    .popup5,
+    .popup_pro {
         height: 60vw;
         width: 80vw;
     }
 }
 
-.overlay5 {
+.overlay5,
+.overlay_pro {
     background: rgba(0, 0, 0, .3);
     position: fixed;
     top: 0;
