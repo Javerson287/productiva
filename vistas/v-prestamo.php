@@ -32,6 +32,7 @@
 
             <thead><br>
             <th>Tipo de Formacion:</th>
+            <th>instructor:</th>
                 <th>Programa:</th>
                 <th>Fase del Proyecto:</th>
                 <th>PRODUCTO DE LA FASE:</th>
@@ -41,7 +42,7 @@
                 <th>Bloque:</th>
                 <th>Piso:</th>
                 <th>Ambiente:</th>
-                <th>instructor:</th>
+                
               
                  
              
@@ -72,6 +73,26 @@
 
             
                                         </td>
+
+                                        <td data-label="instructor:"><select id="mibuscador2"  name="instructor" >
+        
+                                    <?php
+                                        //se realiza la conexion con la base de datos
+                                
+                                        $sql = "select  * from instructores";
+                                        echo $sql;
+                                        $resultado= $conexion->query($sql);
+                                        //se crea l alista de los ambientes
+                                        while($fila = mysqli_fetch_array($resultado) )
+                                        {
+                                            $instructor1 = $fila[ 'documento'];
+                                            $instructor = $fila[ 'n_instructor'];
+                                            echo "<option value =' $instructor1'> $instructor </option>";
+                                        }
+                                        
+                                    ?>
+                                </select></td>
+
 
                                         <td data-label="Programa:"><div id="lista_programa"></div>
                                         </td>
@@ -198,25 +219,7 @@
                                         <td data-label="Ambiente:"><div id="lista_ambiente"></div>
                                         </td> 
 
-                                            <td data-label="instructor:"><select id="mibuscador2"  name="instructor" >
-        
-                                    <?php
-                                        //se realiza la conexion con la base de datos
-                                
-                                        $sql = "select  * from instructores";
-                                        echo $sql;
-                                        $resultado= $conexion->query($sql);
-                                        //se crea l alista de los ambientes
-                                        while($fila = mysqli_fetch_array($resultado) )
-                                        {
-                                            $instructor1 = $fila[ 'documento'];
-                                            $instructor = $fila[ 'n_instructor'];
-                                            echo "<option value =' $instructor1'> $instructor </option>";
-                                        }
-                                        
-                                    ?>
-                                </select></td>
-
+                                            
                                         </table>
             </div>
 <br><br>

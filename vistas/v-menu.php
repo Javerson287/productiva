@@ -38,7 +38,7 @@
           <h2 class="fs-title">Ingresar y Editar </h2>
           <a href="vistas/editar_sede.php">Sedes</a>
           <a href="vistas/instructor.php">Instructor</a><br>
-          <a href="vistas/agregar_programa.php">Programas</a>
+          <a href="vistas/programas.php">Programas</a>
           <a href="vistas/agregar_relacion.php">Asignar</a>
       </fieldset></form>
     
