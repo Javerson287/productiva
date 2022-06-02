@@ -36,3 +36,9 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('#producto').select2();
 });
+
+$(document).ready(function(){
+    $('#buscador').select2();
+});
+
+
