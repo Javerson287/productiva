@@ -1,28 +1,37 @@
+function prueba(a){
 
-$(document).ready(function(){
-    //$('#sede').val($sede);
+console.log(a);
+
+$.ajax({
+    type:"GET",
+    url:"../controladores/programa.php",
+    data:"programa=" + a,
+    success:function(r){
+        $('#competencia').html(r);
+    }
     
-    recargarLista();
-    $('#buscador').change(function(){
-        recargarLista();     
-        
-    });
-   
-})
+});
 
-function recargarLista(){
-    $.ajax({
-        type:"GET",
-        url:"../controladores/programa.php",
-        data:"programa=" + $('#buscador').val(),
-        success:function(r){
-            $('#competencia').html(r);
-        }
-    });
-    
-
-
+prueba2(a);
 
 }
 
+console.log('ese es')
+
+function prueba2(a){
+
+    console.log(a);
+    
+    $.ajax({
+        type:"GET",
+        url:"../controladores/programa2.php",
+        data:"programa=" + a,
+        success:function(r){
+            $('#no').html(r);
+        }
+    });
+    
+    }
+    
+    console.log('ese es')
 
