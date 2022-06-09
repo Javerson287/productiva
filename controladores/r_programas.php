@@ -7,7 +7,7 @@
     $programa = $_POST[ 'programa' ];
     $cp= $_POST[ 'cp' ];
     $nivel=$_POST['nivel'];
-    $t_formacion=$_POST['t_formacion'];
+    $t_formacion=$_POST['id_formacion'];
   
     if ($ficha == true && $programa == true && $cp == true && $nivel == true && $t_formacion == true)
     {

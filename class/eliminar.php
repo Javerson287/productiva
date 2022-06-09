@@ -41,7 +41,7 @@ function editar4($ficha_i, $ficha_f, $programa, $cp, $nivel, $formacion)
 {
     
     $conect = Conex::conectar();
-    $sql = "UPDATE programas SET ficha = '$ficha_f', n_programa = '$programa', cantidad_aprendizes= '$cp', id_nivel='$nivel', t_formacion='$formacion' WHERE ficha = '$ficha_i'; ";
+    $sql = "UPDATE programas SET ficha = '$ficha_f', n_programa = '$programa', cantidad_aprendizes= '$cp', id_nivel='$nivel', id_formacion='$formacion' WHERE ficha = '$ficha_i'; ";
     echo $sql;
     
 

@@ -39,7 +39,7 @@
                     //Vincular con la tabla tipo_formacion y extraer datos
                     $query = $mysqli->query("SELECT * FROM tipo_formacion");
                     while ($valores = mysqli_fetch_array($query)) {
-                        echo '<option  value="' . $valores['t_formacion'] . '">' . $valores['t_formacion'] . '</option>';
+                        echo '<option  value="' . $valores['id_formacion'] . '">' . $valores['id_formacion'] . '</option>';
                     }
                     ?>
                     <!--fin select-->
