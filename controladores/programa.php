@@ -29,7 +29,7 @@
 
 			
 				
-				 $cadena .= "<tr><td data-label='loco'>$competencia</td></tr>";
+				 $cadena .= "<tr><td>$competencia</td><td><button onclick ='eli($comp,$competencia2)'>-</button></td></tr>";
 				
 			}
 		

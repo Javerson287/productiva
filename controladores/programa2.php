@@ -1,3 +1,4 @@
+
 <?php 
  include '../class/conexion.php';
 
@@ -30,7 +31,7 @@
 
 			
 				
-				 $cadena .= "<tr><td data-label='loco'>$competencia</td></tr>";
+				 $cadena .= "<tr><td>$competencia</td><td><button onclick ='ins($comp,$competencia2)'>+</button></td></tr>";
 				
 			}
 		
@@ -38,6 +39,10 @@
 	echo  $cadena."</table>";
 	//var_dump($cadena);
 	
+
 	
+	// $sql2="INSERT INTO prog_comp (id_competencia, ficha) VALUES ($comp, $competencia2);";
+// echo mysqli_query($conexion,$sql2);
+
 
 ?>

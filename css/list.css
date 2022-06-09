@@ -1,0 +1,92 @@
+
+
+body{
+
+    font-family:Tahoma;
+ 
+    background-image: url("../img/sena.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+
+.list {
+  width: 50%;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  /* padding: 10%; */
+  font-family:Arial;
+  
+  
+}
+#buscador
+{
+
+float: left;
+  
+}
+ul 
+{
+position: relative;
+list-style-type:none;
+color: black;
+background-color: teal;
+height: 10vw;
+width: 12vw;
+overflow: auto;
+border: 1px solid;
+
+
+}
+
+#lista
+{
+
+
+
+    width: 100vw;
+    margin: 1vw;
+    position: relative;
+    left: 2vw;
+
+}
+
+#l1{
+
+float: left;
+left: 1vw;
+position: relative;
+width: 30vw;
+overflow: auto;
+height:10vw;
+border: 1px solid;
+background-color: teal;
+}
+
+#l2{
+position:relative;
+  float: left;
+  width: 30vw;
+  left: 2vw;
+  height: 10vw;
+margin: 1px;
+overflow: auto;
+border: 1px solid;
+background-color: teal;
+}
+
+td{
+
+border: 1px solid;
+
+}
+
+li{
+
+  border: 1px solid;
+
+}
+
+
