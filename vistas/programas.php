@@ -25,6 +25,7 @@
 
         <fieldset>
             <div class="titulo">Ingresar Programa</div>
+       
             <input type="number" name="ficha" id="impe" placeholder="ficha" required>
             <input type="text" name="programa" id="impe" placeholder="Nombres del programa" required />
             <input type="number" name="cp" id="impe" placeholder="cantidad de aprendises" required>
@@ -47,13 +48,13 @@
                 <!--fin select-->
             </select>
             <!--lista de los tipos de formacion-->
-            <select name='t_formacion' class="form-control" required>
+            <select name='id_formacion' class="form-control" required>
                 <option value="">tipo de formacion</option>
                 <?php
                 //Vincular con la tabla y extraer datos
                 $query = $mysqli->query("SELECT * FROM tipo_formacion");
                 while ($valores = mysqli_fetch_array($query)) {
-                    echo '<option value="' . $valores['t_formacion'] . '">' . $valores['t_formacion'] . '</option>';
+                    echo '<option value="' . $valores['id_formacion'] . '">' . $valores['id_formacion'] . '</option>';
                 }
                 ?>
                 <!--fin select-->
@@ -92,8 +93,14 @@
                         <td data-label="Nombre del programa:"><?php echo $row->n_programa; ?></td>
                         <td data-label="cant aprendices:"><?php echo $row->cantidad_aprendizes; ?></td>
                         <td data-label="nivel:" id="nivel"><?php echo $row1->n_nivel; ?></td>
-                        <td data-label="formacion:"><?php echo $row->t_formacion; ?></td>
-                        <?php $pp1="imprimir6('".$row->ficha."','".$row->n_programa."', '".$row->t_formacion."','".$row->cantidad_aprendizes."', '".$row->id_nivel."')"; ?>
+
+                        <?php
+                        $sql1 = "select *  from tipo_formacion  where id_formacion ='$row->id_formacion'";
+                          $row2 = mysqli_fetch_object(  mysqli_query($mysqli, $sql1));
+
+                          ?>
+                        <td data-label="formacion:"><?php echo $row2->t_formacion; ?></td>
+                        <?php $pp1="imprimir6('".$row->ficha."','".$row->n_programa."', '".$row->id_formacion."','".$row->cantidad_aprendizes."', '".$row->id_nivel."')"; ?>
                         <td data-label="Opcion"> <?php echo '<button onclick="'.$pp1.'">actualizar</button>';?></td>
 
 

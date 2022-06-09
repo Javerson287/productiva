@@ -40,6 +40,8 @@
           <a href="vistas/instructor.php">Instructor</a><br>
           <a href="vistas/programas.php">Programas</a>
           <a href="vistas/agregar_relacion.php">Asignar</a>
+          <a href="tabla/tabla.php">Competencias</a>
+          
       </fieldset></form>
     
   

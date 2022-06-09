@@ -21,7 +21,8 @@ INNER JOIN ambiente ON ambiente.id_ambiente = prestamo.id_ambiente
 INNER JOIN piso ON piso.id_piso = ambiente.id_piso
 INNER JOIN bloque ON bloque.id_bloque = piso.id_bloque
 INNER JOIN sede ON sede.id_sede = bloque.id_sede
-INNER JOIN instructores on prestamo.documento= instructores.documento
+INNER JOIN prog_inst ON programas.ficha = prog_inst.ficha
+INNER JOIN instructores ON instructores.documento = prog_inst.documento
 
 ";
 
