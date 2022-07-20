@@ -114,7 +114,7 @@ select {
     border-radius: 1px;
     padding: 0vw;
     text-align: center;
-    width: 40vw;
+    width: 60vw;
     height: 15vw;
     transition: .3s ease all;
     transform: scale(0.7);
@@ -127,7 +127,7 @@ select {
     border-radius: 1px;
     padding: 0vw;
     text-align: center;
-    width: 55vw;
+    width: 70vw;
     height: 15vw;
     transition: .3s ease all;
     transform: scale(0.7);
@@ -268,3 +268,44 @@ select {
     display: flex;
     visibility: hidden;
 }
+#volver{
+    background-color: #27AE60;
+    position: relative;
+    left: 0vw;
+    top: 0vw;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.pag_btn {
+    border: solid 1px;
+    border-color: rgb(0, 0, 255);
+    color: rgb(0, 0, 255);
+    background-color: rgb(255, 255, 255);
+  
+  }
+  
+  
+  .pag_btn_des {
+    border: solid 1px;
+    border-color: rgb(200, 200, 200);
+    color: rgb(200, 200, 200);
+    background-color: rgb(245, 245, 245);
+  }
+  
+  .pag_num {
+    border: solid 1px;
+    border-color: rgb(0, 0, 255);
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 255);
+  }
+  .pag_btn:hover{
+    background-color: #38f3b2;
+  }
+  #paginador{
+    position: relative;
+    left: 2vw;
+    top: 0.5vw;
+  }

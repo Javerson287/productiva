@@ -7,24 +7,11 @@ $(document).ready(function(){
         
     });
 })
-
-function recargarLista(){
-    $.ajax({
-        type:"GET",
-        url:"sede.php",
-        data:"continente=" + $('#sede').val(),
-        success:function(r){
-            $('#select2lista').html(r);
-        }
-    });
-    
-}
-
 function lista3(){
     $.ajax({
         type:"GET",
         url:"piso.php",
-        data:"bloque=" + $('#bloque').val(),
+        data:"bloque=" + $('#bloque').val()+"&piso="+ $('#id_piso').val(),
         success:function(r){
             $('#lista_piso').html(r);
         }

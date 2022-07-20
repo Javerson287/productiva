@@ -1,151 +1,100 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-
-
-<title></title>
-
-
-
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>historial</title>
+      <script src="../js/jquery-3.1.1.min.js"></script>
+      <script src="../js/select2.full.min.js"></script>
 </head>
 
 <body>
+      <!-- este es la vista de la programacion de los celadores e instructores -->
+     
+      
+      <button id="volver"> <a href="../controladores/c-iniciar_seccion.php">Iniciar sesion</a></button>
+      <select id="instructor" name="instructor">
+            <option value='no' id="insstructor" type="text" selected></option>
+            <?php
+            include('../class/conexion.php');
+            //se realiza la conexion con la base de datos
+            $conexion = Conex::conectar();
+            $sql = "select * from instructores ORDER BY n_instructor ASC
+        ";
+            //echo $sql;
+            $resultado = $conexion->query($sql);
+            //se crea l alista de los ambientes
+            while ($fila = mysqli_fetch_array($resultado)) {
+                  $fase2 = $fila['n_instructor'] . ' ';
+                  $fase = $fila['documento'];
+                  echo "<option value ='$fase' class='ok' id='instructor'> $fase2 </option>";
+            }
 
-        <div class="header">
-		<ul class="nav">
-			<li><a href="../controladores/c-iniciar_seccion.php">Iniciar sesion</a></li>
-			<li><a href="../controladores/c-menu_cel.php">Realizar otra Busqueda</a></li>
-		</ul>
-	</div> 
-       <br>
-	<form action="../controladores/c-menu_cel.php" method="POST">
-             
-                  <div class="field" id="buscar">
-                        <input type="text" id="buscar" name= "buscar" placeholder="Buscar Registro"/>
-                  </div>
-            
-      </form> 
-      <div class="container">
-            <div>
-                  
-                   <table class="table" >
+            ?>
+      </select>
 
-                        <thead><br>
-                              
+      <!-- selctor de los colores a buscar -->
+      <select id="programa" name="programa">
+            <option value='no' id="programa" type="text" selected></option>
+            <?php
+
+            //se realiza la conexion con la base de datos
+
+            $sql = "select * from programas ORDER BY n_programa ASC
+        ";
+            //echo $sql;
+            $resultado = $conexion->query($sql);
+            //se crea l alista de los ambientes
+            while ($fila = mysqli_fetch_array($resultado)) {
+                  $fase12 = $fila['n_programa'] . ' ';
+                  $fase1 = $fila['ficha'];
+                  echo "<option value ='$fase1' class='ok' id='programa'> $fase1  $fase12 </option>";
+            }
+
+            ?>
+      </select>
+
+
+      <!-- escoger fechas para la busqueda  -->
+      <input type="date" id="fecha">
+      <!-- barra de busqueda -->
+      <button id="buscar" onclick="buscar()">buscar</button>
+      
+      <input type='button' id='n_pagi' value='hc' hidden>
+      
+                  <table  id="tblDatos">
+                        <thead>
+                        <th>Programa</th>
+                        <th>Instructor</th>
+                        <th>Sede</th>
                               <th>Bloque</th>
                               <th>Piso</th>
-                             
                               <th>ambiente</th>
                               <th>Fecha</th>
                               <th>Horario</th>
                               <th>Ficha</th>
-                              <th>Programa</th>
-                              <th>Lunes</th>
-                              <th>Martes</th>
-                              <th>Miercoles</th>
-                              <th>Jueves</th>
-                              <th>Viernes</th>
-                              <th>Sabado</th>
-                              <th>Domingo</th>
+                           
+                              <th>Lun</th>
+                              <th>Mar</th>
+                              <th>Mie</th>
+                              <th>Jue</th>
+                              <th>Vie</th>
+                              <th>Sab</th>
+                              <th>Dom</th>
                               <th>Cant Aprendices</th>
-                            
+
                         </thead>
-                        <tbody>
-                        <?php
+                        <tbody id="historia" >
 
-                              include "v-busqueda.php";
-                              while($row= mysqli_fetch_array($sql_query)){?>
-                              <tr>
-                              <td data-label="Bloque"><?=$row['n_bloque'] ?></td>
-                              <td data-label="Piso"><?=$row['n_piso'] ?></td>
-                              
-                              <td data-label="ambiente"><?=$row['n_ambiente']?></td>
-                              <td data-label="Fecha:"><?=$row['fecha_inicio'].' / '.$row['fecha_fin']?></td>
-                              <td data-label="Horario:"><?=$row['hora_inicio'].' / '.$row['hora_fin']?></td>
-                              <td data-label="Ficha:"><?=$row['ficha']?></td>
-                              <td data-label="Programa"><?=$row['n_programa']?></td>
-                              <td data-label="Lunes:"><?=''; if($row['lunes'] == 1)
-                              {
-
-                                    echo 'X';
-
-                              }else{
-
-                                    echo '';
-                              }
-                              ?></td>                   
-                              <td data-label="Martes:"><?=''; if($row['martes'] == 1)
-                              {
-
-                                    echo 'X';
-
-                              }else{
-
-                                    echo '';
-                              }
-                              ?></td>               
-                              <td data-label="Miercoles:"><?=''; if($row['miercoles'] == 1)
-                              {
-
-                                    echo 'X';
-
-                              }else{
-
-                                    echo '';
-                              }
-                              ?></td>               
-                              <td data-label="Jueves:"><?=''; if($row['jueves'] == 1)
-                              {
-
-                                    echo 'X';
-
-                              }else{
-
-                                    echo '';
-                              }
-                              ?></td>               
-                              <td data-label="Viernes:"><?=''; if($row['viernes'] == 1)
-                              {
-
-                                    echo 'X';
-
-                              }else{
-
-                                    echo '';
-                              }
-                              ?></td>               
-                              <td data-label="Sabado:"><?=''; if($row['sabado'] == 1)
-                              {
-
-                                    echo 'X';
-
-                              }else{
-
-                                    echo '';
-                              }
-                              ?></td>               
-                              <td data-label="Domingo:"><?=''; if($row['domingo'] == 1)
-                              {
-
-                                    echo 'X';
-
-                              }else{
-
-                                    echo '';
-                              }
-                              ?></td>               
-                              
-                              <td data-label="Cant Aprendices:"><?=$row['cantidad_aprendizes']?></td>
-                              
-                              </tr>
-                              <?php }?>
                         </tbody>
                   </table>
-                  
-                           
-            </div> 
-      </div> 
+                  <div id="paginador"></div>
+
+<script src="../js/historial_cel.js"></script>
 
 
 </body>
+
 </html>

@@ -1,0 +1,134 @@
+#centrar {
+    text-align: center;
+    position: center;
+    left: center;
+    color: black;
+}
+#edi .table thead th {
+    width: 2vw;
+    background-color: black;
+}
+#form fieldset {
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    width: 1%;
+    margin: 0 6.5vw;
+    top: 3vw;
+    background-color: azure;
+    /*stacking fieldsets above each other*/
+    position: absolute;
+}
+
+#form input {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.fs-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#form button {
+    background: #27AE60;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px 5px;
+    text-decoration: none;
+}
+
+.sede {
+    position: relative;
+    text-align: center;
+}
+
+.sentra {
+    overflow: auto;
+    width: 80vw;
+    height: 20vw;
+}
+
+.centra {
+    background-color: rgb(103, 109, 107);
+    width: 30vw;
+    overflow: auto;
+    float: left;
+    margin: 1vw;
+    position: relative;
+    left: 8vw;
+}
+
+.bloque {
+    text-align: center;
+    position: relative;
+    top: 1vw;
+}
+
+.na {
+    background-color: aquamarine;
+    margin: 1vw;
+    text-align: center;
+    border: solid aquamarine 1vw;
+}
+
+hr {
+    background-color: rgb(103, 109, 107);
+    position: relative;
+    top: -1.5vw;
+}
+
+.ambiente {
+    text-align: left;
+    margin: 1vw;
+    position: relative;
+    top: -1.5vw;
+}
+
+.piso {
+    border: 1vw solid aquamarine;
+}
+
+.cuerpo {
+    overflow: auto;
+    height: 25vw;
+    border: none;
+}
+
+.enviar,
+.mpiso {
+    position: relative;
+    text-align: center;
+}
+
+
+/* modo responcibo */
+
+@media screen and (max-width: 700px) {
+    #form input {
+        font-size: 12px;
+    }
+    .centra {
+        float: none;
+        width: auto;
+        left: auto;
+    }
+    .cuerpo {
+        height: 50vw;
+    }
+    .sentra {
+        height: 80vw;
+    }
+    #form fieldset {
+        top: -10vw;
+        position: absolute;
+    }
+}

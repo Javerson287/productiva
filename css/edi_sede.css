@@ -93,7 +93,16 @@ button {
     width: none;
     float: right;
 }
-
+#volver{
+    background-color: #27AE60;
+    position: relative;
+    left: vw;
+    top: 0vw;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
 
 /* css del formulario (ingresar nuevos bloques) */
 

@@ -1,15 +1,15 @@
 body {
 
   font-family: Tahoma;
-
   background-image: url("../img/sena.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
+
 }
-.table {
+table {
   position: relative;
-  left: center;
+ 
   background-color: #39A67F;
   border: #39A67F 10px solid;
 }
@@ -19,7 +19,7 @@ body {
   border-color: rgb(0, 0, 255);
   color: rgb(0, 0, 255);
   background-color: rgb(255, 255, 255);
-
+  font-size: 1.1vw;
 }
 
 
@@ -130,47 +130,12 @@ ol {
 
 }
 
-.nav li a:hover {
-  background-color: #434343;
-}
-
-.nav li ul {
-  display: none;
-  position: absolute;
-  min-width: 140px;
-}
-
-.nav li:hover>ul {
-  display: block;
-}
-
-.nav li ul li {
-  position: relative;
-}
-
-.nav li ul li ul {
-  right: -180px;
-  top: 0px;
-}
 
 #buscar {
   position: relative;
   text-align: center;
  
 } 
-
-.bor_s {
-  border: 1px solid;
-}
-
-
-.container {
-  position: relative;
-  top: 3vw;
-  width: 200vw;
-  justify-content: center;
-
-}
 
 #tblDatos {
   visibility: hidden;
@@ -180,10 +145,13 @@ ol {
   visibility: visible;
 }
 
-.table {
+table {
   border: 1px solid #ccc;
   border-collapse: collapse;
 
+  position: relative;
+  left: 1vw;
+  top: 2vw;
   /* padding: 10%; */
   font-family: Arial;
 
@@ -191,20 +159,18 @@ ol {
 .input{
   color: tomato;
 }
-.table tr {
+table tr {
   background-color: #f8f8f8;
   border: 1px solid black;
 }
 
-.table th,
-.table td {
+table th,
+table td {
   font-size: 12px;
-  padding: 0vw;
   background-color: #38f3b2;
   text-align: center;
-
+  max-width: 60vw;
   border: 1px solid black;
-
 }
 
 #bor_s {
@@ -216,54 +182,54 @@ ol {
 }
 
 
-.table thead th {
+table thead th {
   text-transform: uppercase;
   background-color: #ddd;
 }
 
 
 
-.table tbody td:hover {
+table tbody td:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (max-width: 1000px) {
-  .table {
+  table {
     border: 0px;
   }
 
-  .table caption {
+  table caption {
     font-size: 12px;
   }
 
-  .table thead {
+  table thead {
     display: none;
   }
 
-  .table tr {
+  table tr {
     margin-bottom: 8px;
     border-bottom: 4px solid #ddd;
     display: block;
   }
 
-  .table th,
-  .table td {
+  table th,
+  table td {
     font-size: 12px;
     width: auto;
   }
 
-  .table td {
+  table td {
     display: flex;
     border-bottom: 1px solid #ddd;
     text-align: left;
 
   }
 
-  .table td:last-child {
+  table td:last-child {
     border-bottom: 0px;
   }
 
-  .table td::before {
+  table td::before {
     content: attr(data-label);
     font-weight: bold;
     text-transform: uppercase;

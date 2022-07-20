@@ -10,10 +10,11 @@ $(document).ready(function(){
 })
 
 function lista4(){
+   
     $.ajax({
         type:"GET",
         url:"ambiente.php",
-        data:"ambiente=" + $('#lista2').val(),
+        data:"ambiente=" + $('#lista2').val()+"&id="+ $('#id_ambiente').val(),
         success:function(r){
             $('#lista_ambiente').html(r);
         }

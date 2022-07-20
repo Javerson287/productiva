@@ -10,14 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/sede.css">
     <script src="../js/popup3.js"></script>
-    <title>Document</title>
+    <title>sedes</title>
   
 </head>
 
 <body>
+<button id="volver"><a href="../index.php">volver</a></button>
     <div class="titulo">sedes disponibles</div>
     <button onclick='imprimir5()' id="in" type="bu">agregar sede</button>
-    
+  
     <div class="centra1">
         <?php
         include("../controladores/sedes.php");

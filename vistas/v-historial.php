@@ -5,7 +5,8 @@
 
       <title></title>
       <script src="../js/jquery-3.1.1.min.js"></script>
-<script src="../js/select2.full.min.js"></script>
+      <script src="../js/select2.full.min.js"></script>
+      <script src='../js/dias.js'></script>
 
       <script src="../js/historial.js"></script>
 
@@ -13,14 +14,9 @@
 
 <body>
 
-      <div class="header">
-            <ul class="nav">
-                  <li><a href="../index.php">Volver</a></li>
-
-            </ul>
-      </div>
-
+      <button id="volver"> <a href="../index.php">Volver</a></button>
       <select id="instructor" name="instructor">
+            <div id="sel">
             <option value='no' id="insstructor" type="text" selected></option>
             <?php
             include('../class/conexion.php');
@@ -38,8 +34,9 @@
             }
 
             ?>
+            </div>
       </select>
-      
+
       <!-- selctor de los colores a buscar -->
       <select id="programa" name="programa">
             <option value='no' id="programa" type="text" selected></option>
@@ -63,66 +60,56 @@
 
 
       <!-- escoger fechas para la busqueda  -->
-      <input type="date" id="fecha" >
+      <input type="date" id="fecha">
       <!-- barra de busqueda -->
+      <button id="buscar" onclick="buscar()">buscar</button>
 
-<button id="buscar">buscar</button>
-
-
-      <br>
       <form action="../controladores/c-historial.php" method="POST">
 
-           
+      <input type="button" hidden id="n_pagi"value="h">
       </form>
+
       <div class="container">
-            <div>
-
-                  <table class="table">
-
-                        <thead><br>
-
-
-
-
-                              <th>TIPO DE FORMACION</th>
-                              <th>Programa</th>
-                              <th>FASE DEL PROYECTO</th>
-                              <th>PRODUCTO DE LA FASE</th>
-                              <th>ID COMPETENCIA</th>
-                              <th>ID RAP</th>
-                              <th>Sede</th>
-                              <th>Bloque</th>
-                              <th>Piso</th>
-
-
-
-                              <th>ambiente</th>
-                              <th>Fecha</th>
-                              <th>Horario</th>
-                              <th>Ficha</th>
-                              <th>Instructor</th>
-
-
-                              <th>Lun</th>
-                              <th>Mar</th>
-                              <th>Mie</th>
-                              <th>Jue</th>
-                              <th>Vie</th>
-                              <th>Sab</th>
-                              <th>Dom</th>
-                              <th>Cant Aprendices</th>
-                              <th COLSPAN="2">opciones </th>
+                  <table class="table" id="tblDatos">
+                        <thead>
+                              <th rowspan='2'>TIPO DE FORMACION</th>
+                              <th rowspan='2'>Programa</th>
+                              <th rowspan='2'>FASE DEL PROYECTO</th>
+                              <th rowspan='2'>PRODUCTO DE LA FASE</th>
+                              <th rowspan='2' id='id_com'>ID <br>COMPETENCIA</th>
+                              <th rowspan='2'>ID RAP</th>
+                              <th rowspan='2'>Sede</th>
+                              <th rowspan='2'>Bloque</th>
+                              <th rowspan='2'>Piso</th>
+                              <th rowspan='2'>ambiente</th>
+                              <th rowspan='2' id='bor_s'>Fecha</th>
+                              <th rowspan='2'>Horario</th>
+                              <th rowspan='2'>Ficha</th>
+                              <th rowspan='2'>Instructor</th>
+                              <th rowspan='2' id="dias">Lun</th>
+                              <th rowspan='2' id="dias">Mar</th>
+                              <th rowspan='2' id="dias">Mie</th>
+                              <th rowspan='2' id="dias">Jue</th>
+                              <th rowspan='2' id="dias">Vie</th>
+                              <th rowspan='2' id="dias">Sab</th>
+                              <th rowspan='2' id="dias">Dom</th>
+                              <th rowspan='2'>Cant Aprendices</th>
+                              <th rowspan='2' COLSPAN="2">opciones </th>
+                              <th>meses</th>
 
                         </thead>
-                        <tbody id="historia">
-                             
+                        <tbody id="historia" id="mes_hora">
+
                         </tbody>
                   </table>
-                  <a href="../reporte.php"><button onClick>GENERAR EXCEL</button></a>
 
-            </div>
+            
+            <div id="exel"><a href="../reporte.php"><button id="ca" onClick>GENERAR EXCEL</button></a></div>
+            
       </div>
 
+      <div id="paginador"></div>
+      <div id="editable"></div>
 
 </body>
 

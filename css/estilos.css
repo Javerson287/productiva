@@ -50,7 +50,7 @@ a{
     background-color: #39A67F;
 	border:1px solid #39A67F;
 	border-radius:10px;
-	width: 125px;
+	
 	color:#fff;
 	text-decoration:none;
 	text-transform:uppercase;
@@ -153,5 +153,7 @@ position: relative;
 top: 2vw;
 
 }
-
+#peque{
+	width: 11vw;
+}
 

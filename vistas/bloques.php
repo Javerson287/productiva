@@ -21,6 +21,7 @@
     include('form_insert.php');
 
     ?>
+     <button id="volver"> <a href="../vistas/editar_sede.php">Volver</a></button>
     
     <div class="sede">
         <div>
@@ -112,7 +113,7 @@
                     
                     echo '<button onclick="imprimir('.$id_bloque.')"> agregar piso</button>';?>
                    
-                </div>
+                </div> 
             </div>
                                 
         <?php }

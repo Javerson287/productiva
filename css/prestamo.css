@@ -3,7 +3,7 @@
 body{
 
     font-family:Tahoma;
- 
+ text-transform :uppercase;
     background-image: url("../img/sena.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -16,6 +16,14 @@ text-align: center;
 position: center;
 left: center;
 color: black;
+}
+#mes_hora
+{
+ visibility:hidden;
+}
+#mes_hora.active
+{
+ visibility: visible;
 }
 
 
@@ -39,16 +47,19 @@ color: black;
     left: 27vw;
     
 }
+select{
+ min-width: 1vw;
+ max-width: 12vw;
+}
 
 .table {
-  width: 50%;
+  width: 30vw;
   border: 1px solid #ccc;
   border-collapse: collapse;
   margin: 0;
   padding: 100%; 
   font-family:Arial;
-  
-  
+  background-color: #39A67F;
 }
 
 .table tr {
@@ -68,7 +79,6 @@ position: relative;
 
 .table th, .table td {
   font-size: 12px;
- 
   text-align: center;
   border: 1px solid black;
   
@@ -208,6 +218,7 @@ top: 10%;
     background: rgb(100, 200, 255);
     cursor: pointer;
     left: 10px;
+    background-color: #39A67F;
   }
   .form11  {
       
@@ -220,4 +231,18 @@ top: 10%;
     position:relative;
     top: 4vw;
   }
-  
+  #volver{
+    background-color: #39A67F;
+    position: relative;
+
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  #enviar{
+    background-color: #39A67F;
+    position: relative;
+    left: 48vw;
+    top: 1vw;
+  }
