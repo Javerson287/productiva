@@ -22,11 +22,19 @@
 			while($fila = mysqli_fetch_array($result) )
 			{
 				$ambiente1 = $fila[ 'id_ambiente'].' ';
-
 				$ambiente = $fila[ 'n_ambiente'];
-				
-			   
-				 $cadena .= "<option value =' $ambiente1'> $ambiente </option>";
+
+				if (isset($_GET['id'])) {
+					if ($ambiente1 == $_GET['id']) {
+			
+						$cadena .= "<option value ='  $ambiente1' selected='selected'> $ambiente </option>";
+					}else {
+						$cadena .= "<option value =' $ambiente1'> $ambiente </option>";
+					}
+				} else {
+					$cadena .= "<option value =' $ambiente1'> $ambiente </option>";
+				}
+				 
 				
 			}
 
@@ -39,4 +47,4 @@
 
 ?>
 
-<script src="../js/buscador_lista.js"></script>
+

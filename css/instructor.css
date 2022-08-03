@@ -152,42 +152,7 @@ select {
 }
 
 @media screen and (max-width: 1000px) {
-    .table {
-        border: 0px;
-    }
-    .table caption {
-        font-size: 12px;
-    }
-    .table thead {
-        display: none;
-    }
-    .table tr {
-        margin-bottom: 8px;
-        border-bottom: 4px solid #ddd;
-        display: block;
-    }
-    .table th,
-    .table td {
-        font-size: 12px;
-        width: auto;
-    }
-    .table td {
-        display: flex;
-        border-bottom: 1px solid #ddd;
-        text-align: left;
-    }
-    .table td:last-child {
-        border-bottom: 0px;
-    }
-    .table td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        text-transform: uppercase;
-        float: left;
-        width: 110px;
-        text-transform: capitalize;
-        color: rgb(128, 128, 128);
-    }
+    
     #impe {
         width: 20vw;
         font-size: 16px;
@@ -233,6 +198,14 @@ select {
         width: 50vw;
         left: 12.5vw;
     }
+}
+@media screen and (max-width: 540px) {
+  body{
+    transform: rotate(90deg);
+    background-color: #39A67F;
+  }
+
+
 }
 
 @media screen and (max-width: 500px) {
@@ -308,4 +281,23 @@ a{
     position: relative;
     left: 2vw;
     top: 0.5vw;
+  }
+  .buscauniversal{
+    position:relative;
+    left: 2vw;
+    top: -1vw;
+  }
+
+  #buscapro{
+    position: relative;
+    left: 2vw;
+    top: -1vw;
+  }
+  select{
+
+    font-size: 15px;
+  
+  }
+  select:hover{
+    background-color: rgba(255,158,5,255);
   }

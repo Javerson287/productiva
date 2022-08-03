@@ -15,28 +15,17 @@
        	
 	$result=mysqli_query($conexion,$sql);
 
-	$cadena ="<table style = 'border = 1px soild; '>
-	
-	";
+	$cadena = "";
 			
 			while($fila = mysqli_fetch_array($result) )
 			{
-			
 				$competencia2 = $fila[ 'id_competencia'].' ';
-
 				$competencia = $fila[ 'competencia'];
-				
-
-				
-
-			
-				
-				 $cadena .= "<tr><td>$competencia</td><td><button onclick ='ins($comp,$competencia2)'>+</button></td></tr>";
-				
+				 $cadena .= "<tr><td id='tex'>$competencia</td><td><button onclick ='ins($comp,$competencia2)'>+</button></td></tr>";
 			}
 		
 			
-	echo  $cadena."</table>";
+			echo  $cadena;
 	//var_dump($cadena);
 	
 

@@ -60,6 +60,7 @@ select{
   padding: 100%; 
   font-family:Arial;
   background-color: #39A67F;
+
 }
 
 .table tr {
@@ -95,42 +96,21 @@ position: relative;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-@media screen and (max-width: 1000px) {
-  .table {
-      border: 0px;
+@media screen and (max-width:1000px){
+    #mes_hora.active{
+        position:relative;
+        left:8vw;
+    }
+}
+@media screen and (max-width: 540px) {
+  body{
+    transform: rotate(90deg);
+    background-color: #39A67F;
   }
-  .table caption {
-      font-size: 12px;
-  }
-  .table thead {
-      display: none;
-  }
-  .table tr {
-      margin-bottom: 8px;
-      border-bottom: 4px solid #ddd;
-      display: block;
-  }
-  .table th, .table td {
-      font-size: 12px;
-      width: auto;
-  }
-  .table td {
-      display: flex;
-      border-bottom: 1px solid #ddd;
-      text-align: left;
-      
-  }
-  .table  td:last-child {
-      border-bottom: 0px;
-  }
-  .table td::before {
-      content: attr(data-label);
-      font-weight: bold;
-      text-transform: uppercase;
-      float: left;
-      width: 110px;
-      text-transform: capitalize;
-      color: rgb(26, 26, 26);
+
+  .container{
+    
+    display:block;
   }
 }
 
@@ -246,3 +226,4 @@ top: 10%;
     left: 48vw;
     top: 1vw;
   }
+  

@@ -27,12 +27,6 @@
        
         header( "location: c-iniciar_seccion.php" );
 
-
-
-
-
-
-
     }
 
     $files= $r->fetch_all(MYSQLI_ASSOC);

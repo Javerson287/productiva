@@ -7,8 +7,7 @@
  
 
 
-	$sql="SELECT id_bloque,
-			 n_bloque 
+	$sql="SELECT *
 		from bloque 
 		where id_sede='$sede'";
        
@@ -20,12 +19,19 @@
 
 			while($fila = mysqli_fetch_array($result) )
 			{
-				$bloque1 = $fila[ 'id_bloque'].' ';
-
-				$bloque = $fila[ 'n_bloque'];
 				
-			   
-				 $cadena .= "<option value =' $bloque1'> $bloque </option>";
+				$bloque1 = $fila[ 'id_bloque'].' ';
+				$bloque = $fila[ 'n_bloque'];
+				 if (isset($_GET['sede'])) {
+					if ($bloque1 == $_GET['sede']) {
+			
+						$cadena .= "<option value ='$bloque1' selected='selected'> $bloque </option>";
+					}else {
+						$cadena .= "<option value ='$bloque1'> $bloque</option>";
+					}
+				} else {
+					$cadena .= "<option value =' $bloque1'> $bloque </option>";
+				}
 				
 			}
 
@@ -36,4 +42,3 @@
 
 ?>
 <script src="../js/lista2.js"></script>
-<script src="../js/buscador_lista.js"></script>

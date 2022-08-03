@@ -1,37 +1,38 @@
-<?php 
- include '../class/conexion.php';
+<?php
+include '../class/conexion.php';
 
- $conexion=Conex::conectar();
+$conexion = Conex::conectar();
 
- $instructor =$_GET['programas'];
- 
+$instructor = $_GET['programas'];
+if (isset($_GET['ficha'])) {
+}
 
-	$sql="SELECT 
-			 ficha 
+$sql = "SELECT 
+			 *
 		from prog_inst 
+		INNER JOIN programas ON programas.ficha = prog_inst.ficha
 		where documento='$instructor'";
-       
 
-	$result=mysqli_query($conexion,$sql);
+$result = mysqli_query($conexion, $sql);
 
-	$cadena="
-			<select id='mibuscador' name='ficha' size='5'>";
+$cadena = "
+			<select id='mibuscador' name='ficha' >";
 
-			while($fila = mysqli_fetch_array($result) )
-			{
-				$ficha = $fila[ 'ficha'].' ';
+while ($fila = mysqli_fetch_array($result)) {
+	$ficha = $fila['ficha'] . ' ';
+	$nombre = $fila['n_programa'] . ' ';
+	
+	if (isset($_GET['ficha'])) {
+		if ($ficha == $_GET['ficha']) {
 
-			
-				
-			   
-				 $cadena .= "<option value =' $ficha'> $ficha </option>";
-				
-			}
+			$cadena .= "<option value ='  $ficha' selected='selected'> $ficha-$nombre </option>";
+		}else {
+			$cadena .= "<option value =' $ficha'> $ficha-$nombre </option>";
+		}
+	} else {
+		$cadena .= "<option value =' $ficha'> $ficha-$nombre </option>";
+	}
+}
 
-	echo  $cadena."</select>";
+echo  $cadena . "</select>";
 	//var_dump($cadena);
-	
-	
-
-?>
-<script src="../js/buscador_lista.js"></script>

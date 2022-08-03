@@ -1,42 +1,21 @@
-<?php 
- include '../class/conexion.php';
+<?php
+include '../class/conexion.php';
 
- $conexion=Conex::conectar();
+$conexion = Conex::conectar();
 
- $comp =$_GET['programa'];
- 
+$comp = $_GET['programa'];
+$sql = "SELECT * from
+prog_comp INNER JOIN competencicas on prog_comp.id_competencia = competencicas.id_competencia
+where prog_comp.ficha='$comp'";
+$result = mysqli_query($conexion, $sql);
 
-	$sql="SELECT 
-			 *
-		from prog_comp INNER JOIN competencicas on prog_comp.id_competencia = competencicas.id_competencia
-		where prog_comp.ficha='$comp'";
-       	
-	$result=mysqli_query($conexion,$sql);
+$cadena = $cadena = "";
 
-	$cadena ="<table style = 'border = 1px soild; '>
-	
-	";
-			
-			while($fila = mysqli_fetch_array($result) )
-			{
-			
-				$competencia2 = $fila[ 'id_competencia'].' ';
+while ($fila = mysqli_fetch_array($result)) {
 
-				$competencia = $fila[ 'competencia'];
-				
-
-				
-
-			
-				
-				 $cadena .= "<tr><td>$competencia</td><td><button onclick ='eli($comp,$competencia2)'>-</button></td></tr>";
-				
-			}
-		
-			
-	echo  $cadena."</table>";
+	$competencia2 = $fila['id_competencia'] . ' ';
+	$competencia = $fila['competencia'];
+	$cadena .= "<tr><td id='tex'>$competencia</td><td><button onclick ='eli($comp,$competencia2)'>-</button></td></tr>";
+}
+echo  $cadena;
 	//var_dump($cadena);
-	
-	
-
-?>

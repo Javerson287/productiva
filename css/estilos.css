@@ -18,7 +18,7 @@ color: black;
 
 /*form styles*/
 #form {
-	width: 80vw;
+	width: 90vw;
 	margin: 10px auto;
 	text-align: center;
 	position: relative;
@@ -26,17 +26,16 @@ color: black;
 }
 #form fieldset {
 	background: white;
-	border: 0 none;
+	border:  none;
 	border-radius: 3px;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-	padding: 20px 30px;
-
 	width: 80%;
 	margin: 10% 10%;
 	
 	/*stacking fieldsets above each other*/
 	position: relative;
 }
+
 /*headings*/
 .fs-title {
 	font-size: 15px;
@@ -68,9 +67,9 @@ a{
     }
 	.formularios{
 		display: flex;
-		width: 70%;
+		width: 80%;
 		position: absolute;
-		left: 13vw;
+		left: 6vw;
 		flex-direction:row;
 		
 	

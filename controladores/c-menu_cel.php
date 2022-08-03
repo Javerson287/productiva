@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title></title>
 
-        <link rel = "stylesheet" href ="../css/historial.css">
+        <link rel = "stylesheet" href ="../css/historial_cel.css">
         
     </head>
 

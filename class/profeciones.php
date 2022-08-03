@@ -12,40 +12,30 @@ class insertar_instructores extends Conex
             $resultado = $conexion->query($sql);
             if ($conexion ->affected_rows > 0)
             {
-                
-                
                 echo '<script language="javascript">alert("Tus datos se guardaron");window.location.href="../vistas/instructor.php";</script>';
             }
             else
             {
-                
-                
+                // echo $sql;
                 echo '<script language="javascript">alert("Tus datos no se guardaron");window.location.href="../vistas/instructor.php";</script>';
-                
-                
-                
+
             }
         }
-        static function insertar_rap ($id_com, $id_rap,$name)
+    static function insertar_profecion ($n_profecion)
         {
            
             $conexion = Conex::conectar();
-            $sql= "INSERT INTO `resultado_aprenizaje` (`id_competencia`, `id_resultado`, `resultado_aprenizaje`) VALUES ('$id_com', '$id_rap', '$name');";
+            $sql= "INSERT INTO `profesiones` (`n_profesiones`) VALUES ('$n_profecion');";
             $resultado = $conexion->query($sql);
             if ($conexion ->affected_rows > 0)
             {
-                
-                
-                echo '<script language="javascript">alert("Tus datos se guardaron");window.location.href="../vistas/agregar_relacion idrap.php";</script>';
+                echo '<script language="javascript">alert("Tus datos se guardaron");window.location.href="../vistas/profecion.php";</script>';
             }
             else
             {
-             
-                
-                echo '<script language="javascript">alert("Tus datos no se guardaron");window.location.href="../vistas/agregar_relacion idrap.php";</script>';
-                
-                
-                
+            echo $sql;
+               // echo '<script language="javascript">alert("Tus datos no se guardaron");window.location.href="../vistas/profecion.php";</script>';
+
             }
         }
 }

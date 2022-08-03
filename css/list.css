@@ -20,10 +20,21 @@ body {
 
 
 }
+#lado,#lado1,#lado2 {
+  width: 30vw;
+  position: relative;
+  float: left;
+  background-color: #39A67F;
 
+}
+#lado1{
+  left: 2vw;
+}
+#lado2{
+  left: 4vw;
+}
 
 #primero {
-
   width: 30vw;
   position: relative;
   overflow: auto;
@@ -41,6 +52,7 @@ body {
   border: 1px solid;
 
 }
+
 
 #tex {
   width: 30vw;
@@ -61,10 +73,9 @@ tr:hover {
 #l1 {
   position: relative;
   float: left;
-  left: 1vw;
-  width: 30vw;
+  
+  width: 29.5vw;
   overflow: auto;
-  border: 1px solid;
   background-color: #39A67F;
   min-height: 1vw;
   max-height: 25vw;
@@ -72,15 +83,14 @@ tr:hover {
 
 #l2 {
   position: relative;
-  width: 30vw;
   float: left;
-  left: 2vw;
   margin: 1px;
   overflow: auto;
-  border: 1px solid;
   background-color: #39A67F;
   min-height: 1vw;
   max-height: 25vw;
+  width: 29.5vw;
+  
 }
 
 td {
@@ -107,19 +117,7 @@ th{
   background-color: rgb(41, 47, 139);
 
 }
-#agr{
-  position: relative;
-  left: 2vw;
-  background-color: #39A67F;
-  width: 26vw;
-}
-#agr1{
-  position: relative;
-  left: 2vw;
-  background-color: #39A67F;
-  width: 26vw;
-  
-}
+
 #volver{
   background-color: #39A67F;
   position: relative;
@@ -130,4 +128,79 @@ th{
 a{
   text-decoration: none;
   color: black;
+}
+#subir{
+  bottom: 1vw;
+  position: fixed;
+  left: 3vw;
+  z-index: 805;
+}
+@media screen and (max-width: 540px) {
+  body{
+    transform: rotate(90deg);
+    background-color: #39A67F;
+
+  }
+  table{
+    position: relative;
+    left: 10vw;
+    background-color: #ccc;
+
+  }
+  .container{
+    justify-content: left;
+    display:block;
+  }
+}
+#agregarp{
+  visibility: hidden;
+  background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    visibility: hidden;
+}
+
+#agregarp.active{
+  visibility:visible;
+
+  
+
+}
+
+#form_rap{
+  position: absolute;
+  width: 50vw;
+  height: 9vw;
+  background-color: yellow;
+  left: 20vw;
+}
+#lista.active{
+  opacity: 1;
+}
+#cerrar{
+  position: relative;
+ left: 48vw;
+ cursor:pointer;
+
+}
+button{
+  cursor: pointer;
+}
+#centrar{
+  position: relative;
+  left:6vw;
+  top: 1vw;
+}
+#centrar1{
+  position: relative;
+  left:15vw;
+  text-align: center;
+  width: 20vw;
+  font-size: 30px;
 }

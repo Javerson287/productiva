@@ -227,53 +227,17 @@ ol {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-@media screen and (max-width: 1000px) {
-  .table {
-    border: 0px;
+@media screen and (max-width: 540px) {
+  body{
+    transform: rotate(90deg);
+    background-color: #39A67F;
   }
 
-  .table caption {
-    font-size: 12px;
-  }
-
-  .table thead {
-    display: none;
-  }
-
-  .table tr {
-    margin-bottom: 8px;
-    border-bottom: 4px solid #ddd;
-    display: block;
-  }
-
-  .table th,
-  .table td {
-    font-size: 12px;
-    width: auto;
-  }
-
-  .table td {
-    display: flex;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-
-  }
-
-  .table td:last-child {
-    border-bottom: 0px;
-  }
-
-  .table td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    text-transform: uppercase;
-    float: left;
-    width: 110px;
-    text-transform: capitalize;
-    color: rgb(128, 128, 128);
+  .container{
+    
+    display:block;
   }
 }
-
 .field {
   position: absolute;
   top: 400px;
@@ -325,4 +289,16 @@ ol {
 a{
   text-decoration: none;
   color: black;
+}
+
+@media screen and (max-width: 1000px) {
+
+
+#form fieldset{
+    top:0vw;
+    position:relative;
+    
+}
+
+
 }
