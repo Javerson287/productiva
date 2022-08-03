@@ -16,7 +16,7 @@ function buscar() {
   "programa=" + $('#programa').val() + "&" +
   "fecha=" + x);
   
-};
+}
 
 
 var hoy = new Date();
@@ -85,15 +85,16 @@ function alerta(so) {
       type: "GET",
       url: "../controladores/eliminar_h.php",
       data: "tabla=prestamo_ambientes" + "&" +
-        "id_campo=fecha_registro" + "&" +
+        "id_campo=id_prestamo" + "&" +
         "id=" + so
-    })
-    buscar();
-    buscar();
+    });
+   buscar();
+
+    
   } else {
     mensaje = "Has clickado Cancelar";
   }
-  console.log(mensaje);
+
 }
 
 //funcion para descargar en exel este codigo esta a prueva 

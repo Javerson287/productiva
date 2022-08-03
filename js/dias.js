@@ -81,7 +81,7 @@ function pasar() {
 function meses2(f_i, f_f, h_i, h_f, l, mar, mir, j, v, s, d,div) {
         //intento con un una funcion trayendo los datos des la hora en que se trae de la base de datos
 
-        console.log($('#fecha_i').val()+"hola");
+    
         $.ajax({
                 type: "GET",
                 url: "../controladores/fechas.php",

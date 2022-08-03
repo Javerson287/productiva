@@ -10,6 +10,86 @@
 </head>
 
 <body>
+
+<?php
+
+include("../class/conexion.php");
+
+if (isset($_POST["enviar"])) {//nos permite recepcionar una variable que si exista y que no sea null
+
+    $conex= Conex::conectar();
+	require_once("f_pres.php");
+
+	$archivo = $_FILES["archivo"]["name"];
+	$archivo_copiado= $_FILES["archivo"]["tmp_name"];
+	$archivo_guardado = "copia_".$archivo;
+
+
+	
+
+	//echo $archivo."esta en la ruta temporal: " .$archivo_copiado;
+
+
+ copy($archivo_copiado, $archivo_guardado);
+ 
+    
+    if (file_exists($archivo_guardado)) {
+    	 
+    	 $fp = fopen($archivo_guardado,"r");//abrir un archivo
+         $rows = 0;
+         while ($datos = fgetcsv($fp , 1000 , ";")) {
+         	    $rows ++;
+         	   $datos[0] ." ".$datos[1] ." ".$datos[2]." ".$datos[3] ." ".$datos[4] ." ".$datos[5]." ".$datos[6]." ".$datos[7] ." ".$datos[8]." ".$datos[9]." ".$datos[10] ." ".$datos[11]." ".$datos[12]." ".$datos[13] ." ".$datos[14]." ".$datos[15]." ".$datos[16] ." ".$datos[17]." ".$datos[18]." ".$datos[19] ." ".$datos[20]." ".$datos[21]." ".$datos[22] ."<br/>";
+			
+					
+			
+				if($rows > 1) {
+					$til = html_entity_decode($datos[0], ENT_QUOTES | ENT_HTML401, "UTF-8");
+					$til1 = html_entity_decode($datos[2], ENT_QUOTES | ENT_HTML401, "UTF-8");
+					$til2 = html_entity_decode($datos[3], ENT_QUOTES | ENT_HTML401, "UTF-8");
+					$til3 = html_entity_decode($datos[4], ENT_QUOTES | ENT_HTML401, "UTF-8");
+					$til4 = html_entity_decode($datos[8], ENT_QUOTES | ENT_HTML401, "UTF-8");
+					$til5 = html_entity_decode($datos[9], ENT_QUOTES | ENT_HTML401, "UTF-8");
+					$til6 = html_entity_decode($datos[10], ENT_QUOTES | ENT_HTML401, "UTF-8");
+                    $til7 = html_entity_decode($datos[11], ENT_QUOTES | ENT_HTML401, "UTF-8"); 
+                    $til8 = html_entity_decode($datos[12], ENT_QUOTES | ENT_HTML401, "UTF-8"); 
+                    $til9 = html_entity_decode($datos[13], ENT_QUOTES | ENT_HTML401, "UTF-8");
+					 
+				    $f = str_replace('/','-', $datos[6]);
+					$DateTime = DateTime::createFromFormat('d-m-Y', $f);
+					$fecha = $DateTime->format('Y-m-d');
+					$fecha2 = str_replace('-','/', $fecha);
+					
+					
+				
+                    $fe = str_replace('/','-', $datos[7]);
+					$Date = DateTime::createFromFormat('d-m-Y', $fe);
+					$for = $Date->format('Y-m-d');
+					$fecha3 = str_replace('-','/', $for);
+
+                    $lun = ($datos[16] == 'X' || $datos[16] == 'x') ? "1" : "0";
+                    $mar = ($datos[17] == 'X' || $datos[17] == 'x') ? "1" : "0";
+                    $mie = ($datos[18] == 'X' || $datos[18] == 'x') ? "1" : "0";
+                    $jue = ($datos[19] == 'X' || $datos[19] == 'x') ? "1" : "0";
+                    $vie = ($datos[20] == 'X' || $datos[20] == 'x') ? "1" : "0";
+                    $sab = ($datos[21] == 'X' || $datos[21] == 'x') ? "1" : "0";
+                    $dom = ($datos[22] == 'X' || $datos[22] == 'x') ? "1" : "0";
+					
+
+         		insertar_datos($til,$datos[1],$til1,$til2,$til3,$datos[5],$fecha2,$fecha3,$til4,$til5,$til6,$til7,$til8,$til9,$datos[14],$datos[15],$lun,$mar,$mie,$jue,$vie,$sab,$dom);
+      
+                
+            
+                }
+            }
+        }  
+
+}
+
+
+?>
+
+
     <div id=centrar>
         <h1>TipKey</h1>
         <hr style="height:2px;border-width:0;background-color:blue">
@@ -48,7 +128,7 @@
 
                     <td data-label="instructor:"><select id="mibuscador2" name="instructor">
                             <?php
-                            include('../class/conexion.php');
+                            
                             $conexion = Conex::conectar();
                             //se realiza la conexion con la base de datos
                             $sql = "select  * from instructores";
@@ -190,7 +270,7 @@
 
             </table>
         </div>
-        <br><br>
+        <br>
 
         <form action="../controladores/r-prestamo.php" method="POST">
 
@@ -247,8 +327,20 @@
                     <tbody id="meses" data-label="meses:"></tbody>
                 </table>
             </div>
+
+         
+	 </div>
+    
+
             <button id="enviar">enviar</button>
         </form>
+
+        <div class="formulario">
+	 	<form action="" class="formulariocompleto" method="post" enctype="multipart/form-data">
+	 		 <input type="file" name="archivo" class="form-control"/>
+	 		<input type="submit" value="SUBIR ARCHIVO" class="form-control" name="enviar">
+	 	</form>
+        </div>
         <script src="../js/dias.js"></script>
         <script src="../js/lista.js"></script>
         <script src="../js/listaP.js"></script>

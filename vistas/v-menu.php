@@ -38,10 +38,11 @@
           <h2 class="fs-title">Ingresar y Editar </h2>
           <a href="vistas/editar_sede.php" id="peque">Sedes</a>
           <a href="vistas/instructor.php"  id="peque">Instructor</a>
+          <a href="vistas/profecion.php" id="peque">Profesiones</a>
           <a href="vistas/programas.php"  id="peque">Programas</a><br>
           <a href="vistas/agregar_relacionin.php">Instructores VS Programas</a>
           <a href="tabla/tabla.php">Programas VS Competencias</a>
-          
+          <a href="vistas/agregar_relacion idrap.php">Competencias y rap</a>
       </fieldset></form>
     
   

@@ -9,7 +9,7 @@ $(document).ready(function(){
 })
 
 function recargarListaP(){
-    console.log( $('#id_programa').val());
+    console.log( $('#mibuscador2').val());
     $.ajax({
         type:"GET",
         url:"programas.php",

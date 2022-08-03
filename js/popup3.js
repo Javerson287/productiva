@@ -24,11 +24,30 @@ function imprimir6(n, p, i) {
     document.getElementById("cambio6").value = n;
     document.getElementById("cambio7").value = p;
     document.getElementById("cambio8").value = p;
+    console.log(p);
     $(document).ready(function() {
         $('[id="inputState selectLang"]').val(i);
     });
 
 
+
+    btnCerrarPopup2.addEventListener('click', function(e) {
+        e.preventDefault();
+        overlay2.classList.remove('active');
+        popup2.classList.remove('active');
+    });
+
+}
+
+// function para editar la profecion 
+function edi_prof(id,p) {
+    var overlay2 = document.getElementById('overlay5'),
+        popup2 = document.getElementById('popup5'),
+        btnCerrarPopup2 = document.getElementById('btn-cerrar-popup5');
+        document.getElementById("profecion").value = p;
+        document.getElementById("id").value = id;
+    overlay2.classList.add('active');
+    popup2.classList.add('active');
 
     btnCerrarPopup2.addEventListener('click', function(e) {
         e.preventDefault();
